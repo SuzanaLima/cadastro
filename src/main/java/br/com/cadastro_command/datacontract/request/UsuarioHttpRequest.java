@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.Pattern;
+import java.time.LocalDate;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,6 +18,10 @@ public class UsuarioHttpRequest {
     @JsonProperty("email_usuario")
     private String emailUsuario;
 
+    @JsonProperty("data_nascimento")
+    private LocalDate dataNascimento;
+
+    @Pattern(regexp = "(^\\d{3}\\x2E\\d{3}\\x2E\\d{3}\\x2D\\d{2}$)", message = "cpj inválido")
     @JsonProperty("cpf_usuario")
     private String cpf;
 
