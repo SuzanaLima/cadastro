@@ -15,17 +15,14 @@ public class UsuarioService {
 
     public UsuarioHttpResponse inclusaoUsuario(UsuarioHttpRequest usuarioHttpRequest){
 
-        //todo validar
-        // Somente usuários acima de 18 anos serão cadastrados
-        // Não será permitido usuários com e-mail e CPF duplicados
-        // Validar se o CPF é válido (dígitos verificadores);
-
+        //todo - Validar se o CPF é válido (dígitos verificadores);
         // map request to domain
 
         return null;
     }
 
     public UsuarioAtualizaHttpResponse atualizaDadosUsuario(UsuarioAtualizaHttpRequest dadosAtualizacao){
+        //todo - validar se foram informados dados para atualizacao
         return null;
     }
 

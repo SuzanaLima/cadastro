@@ -1,4 +1,4 @@
-package br.com.cadastro_command.service.validation.inclusao;
+package br.com.cadastro_command.service.validation.inclusao.rules;
 
 import br.com.cadastro_command.datacontract.request.UsuarioHttpRequest;
 import br.com.cadastro_command.exception.IdadeNaoPermitidaUsuarioException;
