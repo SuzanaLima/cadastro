@@ -28,9 +28,10 @@ public class CadastroController {
 
     @PatchMapping("/{id_usuario}")
     public ResponseEntity<UsuarioAtualizaHttpResponse> atualizarUsuario(@RequestBody UsuarioAtualizaHttpRequest
-                                                                                    usuarioAtualizaHttpRequest){
+                                                                                    usuarioAtualizaHttpRequest,
+                                                                        @PathVariable("id_usuario") String cpfUsuario){
         try{
-            var usuarioAtualizado =  usuarioService.atualizaDadosUsuario(usuarioAtualizaHttpRequest);
+            var usuarioAtualizado =  usuarioService.atualizaDadosUsuario(usuarioAtualizaHttpRequest, cpfUsuario);
             return new ResponseEntity<>(usuarioAtualizado,HttpStatus.OK);
         } catch (Exception e){
             throw e;

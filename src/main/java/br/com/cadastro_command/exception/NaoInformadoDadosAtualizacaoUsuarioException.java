@@ -1,4 +1,4 @@
-package br.com.cadastro_command.exception.atualiza;
+package br.com.cadastro_command.exception;
 
 import br.com.cadastro_command.exception.GenericException;
 import org.springframework.http.HttpStatus;

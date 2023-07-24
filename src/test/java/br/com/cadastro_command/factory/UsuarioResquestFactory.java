@@ -24,7 +24,7 @@ public class UsuarioResquestFactory {
     public static UsuarioHttpRequest constroiUsuarioMaiorDeIdade(){
         return UsuarioHttpRequest.builder()
                 .cpf("000.000.000-00")
-                .nomeUsuario("userTesteMenorDeIdade")
+                .nomeUsuario("Joaozinhho")
                 .celular("123456")
                 .telefone("315456")
                 .emailUsuario("emailTeste")

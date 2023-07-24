@@ -15,21 +15,21 @@ public class Usuario {
 
     //todo adicionar nome tabela e colunas
     @Id
-    @Column(name = "")
+    @Column(name = "codigoIdentificado")
     private String cpfUsuario;
 
-    @Column(name = "")
+    @Column(name = "nome")
     private String nomeUsuario;
 
-    @Column(name = "")
+    @Column(name = "dataNascimento")
     private LocalDate dataNascimentoUsuario;
 
-    @Column(name = "")
+    @Column(name = "email")
     private String emailUsuario;
 
-    @Column(name = "")
+    @Column(name = "telefone")
     private String telefoneUsuario;
 
-    @Column(name = "")
+    @Column(name = "celular")
     private String celularUsuario;
 }

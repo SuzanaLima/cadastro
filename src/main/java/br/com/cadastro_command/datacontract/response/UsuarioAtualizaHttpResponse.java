@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,6 +16,9 @@ public class UsuarioAtualizaHttpResponse {
 
     @JsonProperty("email_usuario")
     private String emailUsuario;
+
+    @JsonProperty("data_nascimento")
+    private LocalDate dataNascimento;
 
     @JsonProperty("telefone")
     private String telefone;
