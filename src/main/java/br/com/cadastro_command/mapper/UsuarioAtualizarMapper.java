@@ -3,11 +3,13 @@ package br.com.cadastro_command.mapper;
 import br.com.cadastro_command.datacontract.domain.Usuario;
 import br.com.cadastro_command.datacontract.request.UsuarioAtualizaHttpRequest;
 import br.com.cadastro_command.datacontract.response.UsuarioAtualizaHttpResponse;
+import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 import java.util.function.Function;
 
+@Mapper
 public interface UsuarioAtualizarMapper extends Function<UsuarioAtualizaHttpRequest, Usuario> {
 
     UsuarioAtualizarMapper INSTANCE = Mappers.getMapper(UsuarioAtualizarMapper.class);
