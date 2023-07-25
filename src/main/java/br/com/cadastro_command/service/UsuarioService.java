@@ -30,7 +30,6 @@ public class UsuarioService {
     private final AtualizacaoValidator atualizacaoValidator;
     @Transactional
     public UsuarioHttpResponse inclusaoUsuario(UsuarioHttpRequest usuarioHttpRequest){
-        //todo - Validar se o CPF é válido (dígitos verificadores);
         var validadorInclusao = InclusaoUsuario.builder()
                 .cpf(usuarioHttpRequest.getCpf())
                 .emailUsuario(usuarioHttpRequest.getEmailUsuario())
