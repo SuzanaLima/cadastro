@@ -43,7 +43,12 @@ public class UsuarioService {
         inclusaoValidator.valida(validadorInclusao);
 
         var usuarioDomain = UsuarioMapper.INSTANCE.ResquestToDomain(usuarioHttpRequest);
-        usuarioRepository.save(usuarioDomain);
+        try{
+            usuarioRepository.save(usuarioDomain);
+        } catch (Exception e){
+            throw e;
+        }
+
         return UsuarioMapper.INSTANCE.DomainToResponse(usuarioDomain);
     }
 
@@ -58,8 +63,7 @@ public class UsuarioService {
                 .emailUsuario(dadosAtualizacao.getEmailUsuario())
                 .build();
         atualizacaoValidator.valida(validadorAtualizacao);
-        var usuarioAtual = usuarioRepository.findByCpfUsuario(cpfUsuario)
-                .orElseThrow(UsuarioInexistenteException::new);
+        var usuarioAtual = usuarioRepository.findByCpfUsuario(cpfUsuario).orElseThrow(UsuarioInexistenteException::new);
 
         var usuarioAtualizado = AtualizaeSalvaUsuario(dadosAtualizacao, usuarioAtual);
 

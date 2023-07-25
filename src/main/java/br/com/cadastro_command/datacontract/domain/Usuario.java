@@ -1,7 +1,9 @@
 package br.com.cadastro_command.datacontract.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,6 +13,8 @@ import java.time.LocalDate;
 
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "tb_usuarios")
 public class Usuario {
