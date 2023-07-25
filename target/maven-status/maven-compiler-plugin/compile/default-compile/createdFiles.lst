@@ -1,0 +1,17 @@
+br\com\cadastro_command\controller\CadastroController.class
+br\com\cadastro_command\datacontract\response\UsuarioAtualizaHttpResponse.class
+br\com\cadastro_command\CadastroCommandApplication.class
+br\com\cadastro_command\datacontract\request\UsuarioAtualizaHttpRequest.class
+br\com\cadastro_command\service\validation\inclusao\rules\MaiorDeIdadeValitadionRule.class
+br\com\cadastro_command\datacontract\domain\Usuario.class
+br\com\cadastro_command\service\UsuarioService.class
+br\com\cadastro_command\datacontract\request\UsuarioHttpRequest.class
+br\com\cadastro_command\exception\DuplicidadeDeEmailUsuarioException.class
+br\com\cadastro_command\service\validation\atualizacao\rules\DadosAtualizacaoUsuarioValidationRule.class
+br\com\cadastro_command\exception\GenericException.class
+br\com\cadastro_command\repository\UsuarioRepository.class
+br\com\cadastro_command\datacontract\response\UsuarioHttpResponse.class
+br\com\cadastro_command\exception\IdadeNaoPermitidaUsuarioException.class
+br\com\cadastro_command\service\validation\inclusao\rules\DuplicidadeCpfValidationRule.class
+br\com\cadastro_command\exception\DuplicidadeDeCpfUsuarioException.class
+br\com\cadastro_command\service\validation\inclusao\rules\DuplicidadeEmailValidationRule.class
