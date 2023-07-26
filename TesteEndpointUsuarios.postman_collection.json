@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "59de8b72-84f4-4b8a-bd1d-6f442cea8de3",
+		"name": "TesteEndpointUsuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8650151"
+	},
+	"item": [
+		{
+			"name": "Incluir usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome_usuario\" : \"Joaozinhho\",\r\n  \"email_usuario\" : \"emailTeste\",\r\n  \"data_nascimento\": \"1995-07-02\",\r\n  \"cpf_usuario\": \"000.000.000-00\",\r\n  \"telefone\": \"315456\",\r\n  \"celular\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuario/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta cpf",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/usuario/consultacpf/000.000.000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"consultacpf",
+						"000.000.000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta nome",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuario/consultanome/Joaozinhho",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"consultanome",
+						"Joaozinhho"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/usuario/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Altera usuario",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"telefone\": \"10101111\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuario/000.000.000-11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"000.000.000-11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
